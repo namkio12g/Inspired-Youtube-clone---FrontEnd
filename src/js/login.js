@@ -1,7 +1,7 @@
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 export function assignToken(token){
-    cookies.set("token111",token,{
+    cookies.set("token",token,{
         maxAge: 3600000,
     })
 };
