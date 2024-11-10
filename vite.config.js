@@ -16,7 +16,7 @@ export default defineConfig(({
     server: {
       proxy: {
         '/api': {
-          target: env.VITE_API_URL || "http://localhost:2500", // Fallback if not defined
+          target: "http://v1prj-env.eba-ps23adkb.ap-southeast-2.elasticbeanstalk.com", // Fallback if not defined
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
           logLevel: 'debug',
