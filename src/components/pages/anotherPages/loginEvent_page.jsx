@@ -7,7 +7,7 @@ const LoginEventPage=()=>{
     useEffect(()=>{
         async function setToken(tokenKey){
             await assignToken(tokenKey);
-            navigate("/")
+          
         }
         if(key){
             setToken(key)
