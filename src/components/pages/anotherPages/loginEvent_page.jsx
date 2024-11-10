@@ -7,7 +7,7 @@ const LoginEventPage=()=>{
     useEffect(()=>{
         if(key){
             assignToken(key)
-            navigate("/")
+            
         }
         console.log("12312312")
     },[key])
