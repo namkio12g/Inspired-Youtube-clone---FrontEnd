@@ -166,7 +166,7 @@ const Header = ({handleToggleSideBar})=>{
                         </div>
                     </>
                    :<>
-                        <form action="/api/channel/auth/google" method="get" onSubmit={handleSubmit}>
+                        <form action="/api/channel/auth/google" method="get">
                             <button type="submit" >
                                 <FaRegCircleUser className="notification-icon" size={45}/>
                             </button>
