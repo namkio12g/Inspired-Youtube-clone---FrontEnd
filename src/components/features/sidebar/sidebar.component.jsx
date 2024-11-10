@@ -21,7 +21,7 @@ const Sidebar = ({sidebar})=>{
     }
     const handleLogOut=()=>{
         if(user){
-            axios.post("/api/channel/log-out")
+            axios.post("/api/channel/log-out",{withCredentials: true })
             .then(res=>{window.location.reload()})
             .catch(err=>console.log(error))
         }
