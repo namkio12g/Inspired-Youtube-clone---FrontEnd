@@ -270,7 +270,7 @@
     .left-side{
         .search-form{
            position: absolute;
-            top:-100%;
+            top:-130%;
             left: 20%;
             transition: all 0.5s ease;
             border: 1px gray solid;
@@ -284,4 +284,16 @@
  
     }
 }
+}
+@media only screen and (max-width:450px) {
+    .header{
+        .menu_bars{
+            padding:4px
+        }
+        .search-icon-hidden{
+            padding:4px
+        }
+     
+    }
+
 }
