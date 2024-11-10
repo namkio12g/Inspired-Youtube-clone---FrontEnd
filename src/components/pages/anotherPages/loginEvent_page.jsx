@@ -9,6 +9,7 @@ const LoginEventPage=()=>{
             assignToken(key)
             navigate("/")
         }
+        console.log("12312312")
     },[key])
 
 
