@@ -7,10 +7,11 @@ const LoginEventPage=()=>{
     useEffect(()=>{
         async function setToken(tokenKey){
             await assignToken(tokenKey);
-          
+            navigate("/")
         }
         if(key){
-            setToken(key)
+            setToken(key);
+           
             
         }
         console.log("12312312")
