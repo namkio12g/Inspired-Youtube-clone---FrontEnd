@@ -48,7 +48,21 @@ const Header = ({handleToggleSideBar})=>{
         }
        
     }
+    const handleSubmit = async (event) => {
+        event.preventDefault(); 
     
+        try {
+          const response = await axios.get(
+            '/api/channel/auth/google',
+            {
+              withCredentials: true,
+            }
+          );
+          console.log('Form submitted successfully:', response.data);
+        } catch (error) {
+          console.error('Error submitting form:', error);
+        }
+      };
   
     useEffect(()=>{
         const getRidOfBox=(e)=>{
@@ -152,7 +166,7 @@ const Header = ({handleToggleSideBar})=>{
                         </div>
                     </>
                    :<>
-                        <form action="/api/channel/auth/google" method="get">
+                        <form action="/api/channel/auth/google" method="get" onSubmit={handleSubmit}>
                             <button type="submit" >
                                 <FaRegCircleUser className="notification-icon" size={45}/>
                             </button>
