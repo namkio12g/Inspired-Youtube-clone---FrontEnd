@@ -7,7 +7,7 @@ import VideoPage from './pages/anotherPages/video_page';
 import HistoryPage from './pages/anotherPages/history_page';
 import VideosLikedPage from './pages/anotherPages/videosLiked_page';
 import FavoureVideosPage from './pages/anotherPages/favourites_page';
-
+import LoginEventPage from './pages/anotherPages/loginEvent_page';
 import VideosManager from './pages/anotherPages/videosManager_page';
 import SearchedPage from './pages/anotherPages/search_page';
 
@@ -88,6 +88,14 @@ function App() {
                 element={
                   <Layout>
                        <Subcription/>
+                  </Layout>
+                }
+                >
+          </Route>
+          <Route path="/loginEvent/:key"
+                element={
+                  <Layout>
+                      <LoginEventPage/>
                   </Layout>
                 }
                 >
