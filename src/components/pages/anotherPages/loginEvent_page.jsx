@@ -5,8 +5,12 @@ const LoginEventPage=()=>{
     const {key}=useParams();
     const navigate = useNavigate()
     useEffect(()=>{
+        async function setToken(tokenKey){
+            await assignToken(tokenKey);
+            navigate("/")
+        }
         if(key){
-            assignToken(key)
+            setToken(key)
             
         }
         console.log("12312312")
