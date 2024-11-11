@@ -77,6 +77,8 @@
         .item{
             cursor: pointer;
             position: relative;
+            display: flex;
+            flex-direction: row;
             .video-info{
                 margin-left: 2%;
                 margin-right: 40px;
