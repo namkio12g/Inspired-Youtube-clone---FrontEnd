@@ -47,7 +47,7 @@ const Featured = ({channelId})=>{
 
     useEffect(()=>{
         async function fetchData(){
-            await axios.get(`/api/channel-home-videos/${channelId}`)
+            await axios.get(`/api/get-channel-home-videos/${channelId}`)
             .then(res=>{setData(res.data);setLoading(false)})
             .catch(err=>{console.log(err);setLoading(false)})
         }
