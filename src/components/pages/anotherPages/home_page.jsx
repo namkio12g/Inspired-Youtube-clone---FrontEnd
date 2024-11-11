@@ -51,7 +51,10 @@ const Home = ({handleToggleSideBar})=>{
             query+=`&categoryId=${categoryId}`
 
         await axios.get(query)
-        .then(res=>{setData(res.data.videosWithChannel);console.log(res.data.videosWithChannel)})
+        .then(res=>{setData(res.data.videosWithChannel);
+                    if(res.data.videosWithChannel.length==0){
+                        setHasMore(false)}
+                    })
         .catch(error=>console.error("Error:",error))
 
         await axios.get(`/api/get-categories`)
@@ -125,7 +128,11 @@ const Home = ({handleToggleSideBar})=>{
                                     </Row>
                                 </InfiniteScroll>
                                 :<>
-                                    <LoadingPage/>
+                                    <div className="cant-find-container d-flex flex-row justify-content-center align-items-center">
+                                        <div>
+                                            <h2>There are no videos</h2>
+                                        </div>
+                                    </div>
                                 </>
                     }
                 </div>
