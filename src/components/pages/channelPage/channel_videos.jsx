@@ -31,7 +31,7 @@ const Videos = ({channelId})=>{
     ]
     const handleMoreData=()=>{
         setPagination(prev=>prev+1)
-        axios.get(`/api/channel-videos/${find}`,{params:{channelId:channelId,pagination:pagination+1}})
+        axios.get(`/api/get-channel-videos/${find}`,{params:{channelId:channelId,pagination:pagination+1}})
         .then(res=>{
             if(res.data.length==0)
                 setHasMore(false)
@@ -47,7 +47,7 @@ const Videos = ({channelId})=>{
 
     useEffect(()=>{
             async function fetchData(){
-                await axios.get(`/api/channel-videos/${find}`,{params:{channelId:channelId,pagination:pagination}})
+                await axios.get(`/api/get-channel-videos/${find}`,{params:{channelId:channelId,pagination:pagination}})
                 .then(res=>{setData(res.data);setLoading(false)})
                 .catch(err=>{console.log(err);setLoading(false)})
             }
