@@ -153,3 +153,22 @@
     }
    
 }
+@media only screen and (max-width:$breakpoint-md) {
+.search-page{
+    padding: 2rem 1% 2rem 1%;
+    .videos{
+        img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .item{
+           
+            flex-direction: column;
+             .video-info{
+                width: 100%;
+             }
+        }
+    }
+    }
+   
+}
