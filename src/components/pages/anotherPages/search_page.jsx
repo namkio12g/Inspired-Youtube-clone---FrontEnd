@@ -90,8 +90,8 @@ const SearchedPage=()=>{
                                     {filterSelection=="videos"
                                     ?data.map((item,index)=>(
                                         
-                                      <Link to={`/video/${item._id}`} style={{ textDecoration: 'none' }}>
-                                            <div key={index} className="item mb-4">
+                                      <Link key={index} to={`/video/${item._id}`} style={{ textDecoration: 'none' }}>
+                                            <div  className="item mb-4">
                                                     <img src={item.thumbnail} alt="" />
                                                     <div className="video-info d-flex flex-column">
                                                         <span className="title">{item.title} </span>
