@@ -90,26 +90,23 @@ const SearchedPage=()=>{
                                     {filterSelection=="videos"
                                     ?data.map((item,index)=>(
                                         
+                                      <Link to={`/video/${item._id}`} style={{ textDecoration: 'none' }}>
                                             <div key={index} className="item mb-4">
-                                                <Link to={`/video/${item._id}`} style={{ textDecoration: 'none' }}>
-                                                    <div className="d-flex flex-row">
-                                                        <img src={item.thumbnail} alt="" />
-                                                        <div className="video-info d-flex flex-column">
-                                                            <span className="title">{item.title} </span>
-                                                        <div className="channelTitle-view">
-                                                                    <span>{item.channelTitle}</span>
-                                                                    <FaCheck className="check-icon ms-1"/>   
-                                                                    <span> • </span>
-                                                                    <FaFire className="view-icon me-1   "/> 
-                                                                    <span>{item.views} lượt xem</span>
-                                                                    
-                                                            </div>
-                                                            <span className="descriptions">{item.description}</span>
+                                                    <img src={item.thumbnail} alt="" />
+                                                    <div className="video-info d-flex flex-column">
+                                                        <span className="title">{item.title} </span>
+                                                    <div className="channelTitle-view">
+                                                                <span>{item.channelTitle}</span>
+                                                                <FaCheck className="check-icon ms-1"/>   
+                                                                <span> • </span>
+                                                                <FaFire className="view-icon me-1   "/> 
+                                                                <span>{item.views} lượt xem</span>
+                                                                
                                                         </div>
+                                                        <span className="descriptions">{item.description}</span>
                                                     </div>
-                                                </Link>
-                                            
                                             </div>
+                                        </Link>
                                         
                                     ))
                                     :data.map((item,index)=>(
