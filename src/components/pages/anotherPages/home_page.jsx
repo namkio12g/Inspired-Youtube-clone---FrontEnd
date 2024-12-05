@@ -130,7 +130,10 @@ const Home = ({handleToggleSideBar})=>{
                                 :<>
                                     <div className="cant-find-container d-flex flex-row justify-content-center align-items-center">
                                         <div>
-                                            <h2>There are no videos</h2>
+                                            <h2>We apologize for the inconvenience</h2>
+                                            <h2>The website's back-end has been stopped because AWS continued to bill me even though it was not being used.</h2>
+                                            <h2>If you are interested in learning more about the website, please visit my portfolio here:</h2>
+                                            <a href="https://namkio12g.github.io/portfolio/inspired.html">My Portfolio</a>
                                         </div>
                                     </div>
                                 </>
