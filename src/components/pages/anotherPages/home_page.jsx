@@ -129,7 +129,7 @@ const Home = ({handleToggleSideBar})=>{
                                 </InfiniteScroll>
                                 :<>
                                     <div className="cant-find-container d-flex flex-row justify-content-center align-items-center">
-                                        <div>
+                                        <div clasName="text-center">
                                             <h2>We apologize for the inconvenience</h2>
                                             <h2>The website's back-end has been stopped because AWS continued to bill me even though it was not being used.</h2>
                                             <h2>If you are interested in learning more about the website, please visit my portfolio here:</h2>
